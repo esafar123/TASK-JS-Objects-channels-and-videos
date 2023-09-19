@@ -91,10 +91,10 @@ console.log(getChannelByVideoTitle("The Universal S", channels));
  * Hint: use string method `.includes()` and iteration method `.filter()`
  ****************************************************************/
 function searchChannels(query, channels) {
-let x = channels.filter ( channel => channel.name == query || channel.description.includes(query) ) 
+let x = channels.filter ( channel => channel.name.includes(query) || channel.description.includes(query) ) 
 return x
 }
-// console.log(searchChannels("the", channels))
+console.log(searchChannels("the", channels));
 
 module.exports = {
   getChannelName,
